@@ -84,6 +84,31 @@
     </tr>
   </table>
 
+    <!-- Collapsible Sections -->
+    <div class="faq-section">
+      <details>
+        <summary>Assignments</summary>
+        <p>Assignment 1: Variables and Expressions</p>
+        <p>Assignment 2: Control Flow Practice</p>
+      </details>
+      <details>
+        <summary>Quizzes</summary>
+        <p>Quiz 1: Basic Concepts</p>
+        <p>Quiz 2: Loops & Recursion</p>
+      </details>
+      <details>
+        <summary>Mini Projects</summary>
+        <p>Project 1: Calculator using C++</p>
+      </details>
+      <details>
+        <summary>LeetCode Challenges</summary>
+        <p>Challenge 1: Two Sum</p>
+        <p>Challenge 2: Reverse Integer</p>
+      </details>
+    </div>
+  </div>
+  
+  
   <h2>Object-Oriented Programming (OOP)</h2>
   <table>
     <tr>
@@ -143,6 +168,31 @@
     </tr>
   </table>
 
+    <!-- Collapsible Sections -->
+    <div class="faq-section">
+      <details>
+        <summary>Assignments</summary>
+        <p>Assignment 1: Variables and Expressions</p>
+        <p>Assignment 2: Control Flow Practice</p>
+      </details>
+      <details>
+        <summary>Quizzes</summary>
+        <p>Quiz 1: Basic Concepts</p>
+        <p>Quiz 2: Loops & Recursion</p>
+      </details>
+      <details>
+        <summary>Mini Projects</summary>
+        <p>Project 1: Calculator using C++</p>
+      </details>
+      <details>
+        <summary>LeetCode Challenges</summary>
+        <p>Challenge 1: Two Sum</p>
+        <p>Challenge 2: Reverse Integer</p>
+      </details>
+    </div>
+  </div>
+  
+  
   <h2>Data Structures & Algorithms (DSA)</h2>
   <table>
     <tr>
@@ -207,7 +257,31 @@
     </tr>
   </table>
 
+    <!-- Collapsible Sections -->
+    <div class="faq-section">
+      <details>
+        <summary>Assignments</summary>
+        <p>Assignment 1: Variables and Expressions</p>
+        <p>Assignment 2: Control Flow Practice</p>
+      </details>
+      <details>
+        <summary>Quizzes</summary>
+        <p>Quiz 1: Basic Concepts</p>
+        <p>Quiz 2: Loops & Recursion</p>
+      </details>
+      <details>
+        <summary>Mini Projects</summary>
+        <p>Project 1: Calculator using C++</p>
+      </details>
+      <details>
+        <summary>LeetCode Challenges</summary>
+        <p>Challenge 1: Two Sum</p>
+        <p>Challenge 2: Reverse Integer</p>
+      </details>
+    </div>
+  </div>
 
+  
   <h2>Design and Analysis of Algorithms (DAA)</h2>
   <table>
     <tr>
@@ -266,6 +340,30 @@
       <td>2 Weeks</td>
     </tr>
   </table>
+
+      <!-- Collapsible Sections -->
+    <div class="faq-section">
+      <details>
+        <summary>Assignments</summary>
+        <p>Assignment 1: Variables and Expressions</p>
+        <p>Assignment 2: Control Flow Practice</p>
+      </details>
+      <details>
+        <summary>Quizzes</summary>
+        <p>Quiz 1: Basic Concepts</p>
+        <p>Quiz 2: Loops & Recursion</p>
+      </details>
+      <details>
+        <summary>Mini Projects</summary>
+        <p>Project 1: Calculator using C++</p>
+      </details>
+      <details>
+        <summary>LeetCode Challenges</summary>
+        <p>Challenge 1: Two Sum</p>
+        <p>Challenge 2: Reverse Integer</p>
+      </details>
+    </div>
+  </div>
   
   <h2>Additional Details</h2>
   <ul>
@@ -274,7 +372,7 @@
     <li><strong>GitHub Portfolio:</strong> Regular updates with individual repositories, detailed READMEs, and project documentation.</li>
   </ul>
 
-  <h3>Resources for Videos & Tutorials</h3>
+  <h2>Resources for Videos & Tutorials</h3>
   <ul>
     <li><a href="https://leetcode.com/problemset/all/" target="_blank">LeetCode</a></li>
     <li><a href="https://lab.github.com/" target="_blank">GitHub Learning Lab</a></li>    
@@ -294,6 +392,24 @@
   </ul>
   
   <p>Feel free to edit this file as needed to update the course content. Save it as an HTML file for online hosting or local editing.</p>
+
+
+  <script>
+    document.querySelectorAll('.course').forEach(course => {
+      const checkboxes = course.querySelectorAll('.progress-checkbox');
+      const progressFill = course.querySelector('.progress-fill');
+      const totalModules = parseInt(course.getAttribute('data-total'));
+
+      function updateProgress() {
+        const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
+        const percent = Math.round((completed / totalModules) * 100);
+        progressFill.style.width = percent + '%';
+        progressFill.textContent = percent + '%';
+      }
+
+      checkboxes.forEach(cb => cb.addEventListener('change', updateProgress));
+    });
+  </script>
   
 </body>
 </html>
